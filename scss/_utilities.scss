@@ -1,3 +1,13 @@
+//Container
+.container {
+  max-width: $max-width;
+  margin: auto; //centers our container
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem; //give us space below teh navbar
+  margin-bottom: 3rem;
+}
+
 //text styles
 .x-large {
   font-size: 4rem;
@@ -14,6 +24,9 @@
 }
 .text-primary {
   color: $primary-color;
+}
+.round-img{
+  border-radius: 50%;
 }
 
 //Background rules using SASS's nesting properties
@@ -85,6 +98,29 @@
     color: #fff;
   }
 }
+
+//alert styles
+.alert {
+  padding: 0.8rem;
+  margin: 1rem;
+  opacity: 0.9;
+  background-color: $light-color;
+  color: #333;
+}
+
+  .alert .alert-primary{
+    @include set-background($primary-color);
+  }
+  .alert .alert-dark{
+    @include set-background($dark-color);
+  }
+  .alert .alert-success{
+    @include set-background($success-color);
+  }
+  .alert .alert-danger{
+    @include set-background($danger-color);
+  }
+
 
 .dark-overlay{
   height: 100%;
