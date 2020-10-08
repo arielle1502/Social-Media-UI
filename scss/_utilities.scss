@@ -29,6 +29,12 @@
   border-radius: 50%;
 }
 
+.line{
+  height:1px;
+  background-color: #333;
+  margin: 1.5rem 0;
+}
+
 //Background rules using SASS's nesting properties
 .bg {
   &-primary {
@@ -121,6 +127,28 @@
     @include set-background($danger-color);
   }
 
+  // badge styles
+  .badge {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0.3rem;
+    background-color: $light-color;
+    color: #333;
+
+    &.badge-primary {
+      @include set-background($primary-color)
+    }
+    &.badge-dark {
+      @include set-background($dark-color)
+    }
+    &.badge-danger{
+      @include set-background($danger-color)
+    }
+    &.badge-success{
+      @include set-background($success-color)
+    }
+  }
 
 .dark-overlay{
   height: 100%;
